@@ -14,6 +14,7 @@ export const searchUsers = async (text) => {
   })
 
   const res = await github.get(`/search/users?${params}`)
+  console.log(res.data.items)
   return res.data.items
 }
 
